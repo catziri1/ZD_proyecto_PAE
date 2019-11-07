@@ -12,21 +12,54 @@
     text-align: center;
     font-family: Lora;
     font-size: 12px;
+    
 }
- 
-.modal-content {
+label{
+  color: white;
+}
+label:hover{
+  color:#004FAE;
+}
+#form-switch {
+  display:none;
+}
+#register-form {
+  display:none
+}
+#form-switch:checked~#register-form {
+  display:block
+}
+#form-switch:checked~#login-form {
+  display:none
+}
+.modal-content-register {
     opacity: 1;
-    background-color: white;
+    background-color: #2D2D2D;
     margin: auto;
-    border: 1px solid #888;
-    width: 30%;
-    height: 75%;
+    border: 1px solid white;
+    width: 300px;
+    height: 520px;
 
     //center 
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.modal-content-login {
+  opacity: 1;
+  background-color: #2D2D2D;
+  margin: auto;
+  border: 1px solid white;
+  width: 300px;
+  height: 300px;
+
+  //center 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .login {
@@ -39,30 +72,30 @@
     width: 60%;
 }
 
-input[type=text], input[type=password] {
+input[type=text], input[type=password], input[type=email] {
     width: 100%;
-    padding: 10px 20px;
+    padding: 10px 15px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-family: Lora;
-    font-size: 15px;
+    font-size: 12px;
   }
 
  
   button {
     background-color: #004FAE;
     color: white;
-    padding: 5px 20px;
-    margin: 8px 0;
+    padding: 5px 5px;
+    margin: 0px 0;
     border: none;
     border-radius: 5px;
     font-family:Lora;
     font-size: 13px;
     cursor: pointer;
-    width: 45%;
+    width: 100px;
   }
   
   button:hover {
