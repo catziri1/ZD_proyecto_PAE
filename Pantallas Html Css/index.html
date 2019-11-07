@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lora&display=swap" rel="stylesheet">
+    <title>Zona Docs</title>
+    <style>
+        body, html{
+            margin: 0;
+            padding: 0;
+            font-family: 'Lora', serif;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /*HEADER*/
+        header > .navContainer{
+            padding: 30px 0px;
+        }
+        header > .navContainer > nav{
+            display: flex;
+            list-style-type: none;
+            background-color: #160101;
+            padding: 10px;
+            height: 30px;
+            padding-left: 240px;
+        }
+        header > .navContainer > nav > li{
+            color: #FFFDFD;
+            font-size: 24px;
+            margin: 0px 20px;
+        }
+        header .logo{
+            width: 160px;
+            position: absolute;
+            top: 15px;
+            left: 20px;
+        }
+        header .logo img{
+            width: 100%;
+        }
+
+        /*Pagina*/
+        .mainContainer{
+            padding: 20px 40px;
+        }
+        .mainContainer > .firstSection{
+            display: flex;
+        }
+        .mainContainer > .firstSection > .right{
+            flex: 1px;
+            padding: 10px;
+        }
+
+        /*Card type 1*/
+        .cardType1 > .image{
+            display: flex;
+        }
+        .cardType1 > .image > img{
+            width: 100%;
+            max-height: 450px;
+        }
+        .cardType1 > .infoContainer{
+            background-color: #F5F3F3;
+            padding: 10px 20px;
+        }
+        .cardType1 > .infoContainer > .title{
+            font-size: 30px;
+        }
+        .cardType1 > .infoContainer > .section{
+            font-size: 20px;
+            text-align: right;
+            color: #720500;
+            text-transform: uppercase;
+        }
+        .cardType1 > .infoContainer > .date{
+            font-size: 16px;
+            text-align: right;
+
+        }
+        .mainContainer > .firstSection > .left{
+            padding: 10px;
+        }
+        .mainContainer > .firstSection > .left > .cardType2:nth-last-child(n+2){
+            margin-bottom: 20px;
+        }
+        /*Card type 2*/
+        .cardType2 > .image{
+            display: flex;
+        }
+        .cardType2 > .image > img{
+            width: 100%;
+            max-height: 150px;
+        }
+        .cardType2 > .infoContainer{
+            background-color: #F5F3F3;
+            padding: 10px 20px;
+            height: 110px;
+        }
+        .cardType2 > .infoContainer > .section{
+            font-size: 16px;
+            text-align: right;
+            color: #720500;
+            text-transform: uppercase;
+        }
+        .cardType2 > .infoContainer > .title{
+            font-size: 20px;
+        }
+        .mainContainer > .firstSection > .left{
+            width: 450px;
+        }
+
+
+
+
+
+
+        .sectionContainer{
+            display: flex;
+        }
+        .sectionContainer:nth-last-child(n+2){
+            margin-bottom: 25px;
+        }
+        .sectionContainer > .mainSection:nth-last-child(n+2){
+            margin-right: 60px;
+        }
+
+        .mainSection{
+            flex: 1;
+        }
+
+        .mainSection > .innerSection > .title{
+            border-bottom: 5px solid #004FAE;
+            font-size: 32px;
+            width: fit-content;
+            padding-right: 50px;
+            margin-bottom: 30px;
+        }
+        .mainSection > .innerSection:nth-last-child(n+2){
+            padding-bottom: 40px;
+            border-bottom: 1px dashed #000000;
+            margin-bottom: 30px;
+        }
+        .mainSection > .innerSection > .cardsContainer{
+            display: flex;
+        }
+        .mainSection > .innerSection > .cardsContainer > .card:nth-last-child(n+2){
+            margin-right: 40px;
+        }
+        .mainSection > .innerSection > .cardsContainer > .card > .image{
+            display: flex;
+        }
+        .mainSection > .innerSection > .cardsContainer > .card > .image > img{
+            height: 220px;
+            width: 100%;
+        }
+        .mainSection > .innerSection > .cardsContainer > .card > .infoContainer{
+            background: #F9F7F7;
+            padding: 10px;
+            height: 120px;
+        }
+        .mainSection > .innerSection > .cardsContainer > .card > .infoContainer > .intro{
+            font-size: 20px;
+        }
+        .sideSection{
+            width: 450px;
+        }
+        .sideSection > .title{
+            border-bottom: 5px solid #004FAE;
+            font-size: 32px;
+            width: fit-content;
+            padding-right: 10px;
+            margin-bottom: 30px;
+        }
+        .sideSection > .cardsContainer > .card:nth-last-child(n+2){
+            margin-bottom: 25px;
+        }
+        .sideSection > .cardsContainer > .card > .image{
+            display: flex;
+        }
+        .sideSection > .cardsContainer > .card > .image > img{
+            width: 100%;
+            max-height: 150px;
+        }
+        .sideSection > .cardsContainer > .card > .infoContainer{
+            background-color: #F5F3F3;
+            padding: 10px 20px;
+            height: 100px;
+        }
+        .sideSection > .cardsContainer > .card > .infoContainer > .section{
+            font-size: 16px;
+            text-align: right;
+            color: #720500;
+            text-transform: uppercase;
+        }
+        .sideSection > .cardsContainer > .card > .infoContainer > .title{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navContainer">
+            <nav>
+                <li>Reportajes</li>
+                <li>Imperdibles</li>
+                <li>Zona de Notas</li>
+                <li>Zona de Opinión</li>
+                <li>¿Quiénes somos?</li>
+            </nav>
+            <div class="social">
+
+            </div>
+        </div>
+        <div class="logo">
+            <img src="images/logo.jpeg">
+        </div>
+    </header>
+    <div class="mainContainer">
+        <div class="firstSection">
+            <div class="right">
+                <div class="cardType1">
+                    <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/11/6-11-2019-CONFERENCIA-DE-PRENSA-MATUTINA-FOTO-05-770x513.jpg"></div>
+                    <div class="infoContainer">
+                        <div class="title">Caso Lesvy: Cadenas de impunidad que le apuestan al cansancio</div>
+                        <div class="section">Imperdibles</div>
+                        <div class="date">Juan Pérez de A. - 8 de Octubre 2019</div>
+                    </div>
+                </div>
+            </div>
+            <div class="left">
+                <div class="cardType2">
+                    <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg"></div>
+                    <div class="infoContainer">
+                        <div class="section">Imperdibles</div>
+                        <div class="title">La Coyotera Radio, una radio comunitaria urbana</div>
+                    </div>
+                </div>
+                <div class="cardType2">
+                    <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg"></div>
+                    <div class="infoContainer">
+                        <div class="section">Imperdibles</div>
+                        <div class="title">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectionContainer">
+            <div class="mainSection">
+                <div class="innerSection">                
+                    <div class="title">Reportajes Destacados</div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="innerSection">
+                    <div class="title">Reportajes Destacados</div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sideSection">
+                <div class="title">Zona de notas</div>
+                <div class="cardsContainer">
+                    <div class="card">
+                        <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg"></div>
+                        <div class="infoContainer">
+                            <div class="section">Imperdibles</div>
+                            <div class="title">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg"></div>
+                        <div class="infoContainer">
+                            <div class="section">Imperdibles</div>
+                            <div class="title">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="image"><img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg"></div>
+                        <div class="infoContainer">
+                            <div class="section">Imperdibles</div>
+                            <div class="title">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sectionContainer">
+            <div class="mainSection">
+                <div class="innerSection">
+                    <div class="title">Reportajes Destacados</div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mainSection">
+                <div class="innerSection">
+                    <div class="title">Reportajes Destacados</div>
+                    <div class="cardsContainer">
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="https://www.zonadocs.mx/wp-content/uploads/2019/05/San-Lorenzo-de-Atzqueltán-16-1280x768.jpg">
+                            </div>
+                            <div class="infoContainer">
+                                <div class="intro">Cercan y criminalizan a 3 Poblaciones en Chiapas, por homicidio de Guardia Nacional.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
