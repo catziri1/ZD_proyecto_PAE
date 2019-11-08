@@ -8,7 +8,7 @@ module.exports = function(app) {
         });
     app.route('/api/usuarios/:id')
         .get((req, res) => {
-            res.send('GET usuario en'+id);
+            res.send('GET usuario en');
         })
         .put((req, res) => {
             res.send('PUT usuario-actualizar');
