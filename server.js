@@ -13,6 +13,7 @@ app.use('/', indexRouter);
 
 app.use('/api/publicaciones', publicacionesRouter);
 
+
 app.use(function(req, res, next) {
     res.writeHead(404);
     res.end();
