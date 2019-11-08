@@ -1,7 +1,13 @@
 # REPO
 https://github.com/catziri1/ZD_proyecto_PAE.git
 
-Pantallas en carpeta Pantallas HTML Css y en la carpeta de src>app>login
+Pantallas en carpeta Pantallas HTML Css y en la carpeta de src>app
+
+# APIs
+Luisa publicaciones
+Victoria usuarios
+Cynthia imagenes y emisiones
+
 
 # App
 
