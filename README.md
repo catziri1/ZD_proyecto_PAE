@@ -1,3 +1,8 @@
+# REPO
+https://github.com/catziri1/ZD_proyecto_PAE.git
+
+Pantallas en carpeta Pantallas HTML Css y en la carpeta de src>app>login
+
 # App
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.17.
